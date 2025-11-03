@@ -2,7 +2,7 @@
 
 #include <imnodes.h>
 #include <imgui.h>
-#include <SDL_keycode.h>
+#include <SDL3/SDL_keycode.h>
 
 #include <algorithm>
 #include <cassert>

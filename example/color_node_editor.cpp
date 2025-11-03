@@ -4,7 +4,7 @@
 #include <imnodes.h>
 #include <imgui.h>
 
-#include <SDL2/SDL_timer.h>
+#include <SDL3/SDL_timer.h>
 #include <algorithm>
 #include <cassert>
 #include <chrono>
