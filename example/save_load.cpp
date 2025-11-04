@@ -88,6 +88,8 @@ public:
 
         ImNodes::EndNodeEditor();
 
+        HandleEditorZoom();
+
         {
             Link link;
             if (ImNodes::IsLinkCreated(&link.start_attr, &link.end_attr))

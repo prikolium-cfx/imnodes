@@ -550,6 +550,8 @@ public:
         ImNodes::MiniMap(0.2f, minimap_location_);
         ImNodes::EndNodeEditor();
 
+        HandleEditorZoom();
+
         // Handle new links
         // These are driven by Imnodes, so we place the code after EndNodeEditor().
 

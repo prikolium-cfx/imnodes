@@ -84,6 +84,8 @@ void show_editor(const char* editor_name, Editor& editor)
 
     ImNodes::EndNodeEditor();
 
+    HandleEditorZoom();
+
     {
         Link link;
         if (ImNodes::IsLinkCreated(&link.start_attr, &link.end_attr))
