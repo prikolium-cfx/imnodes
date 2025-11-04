@@ -2286,11 +2286,12 @@ void BeginNodeEditor()
         GImNodes->OriginalImgCtx = ImGui::GetCurrentContext();
 
         // Copy config settings in IO from main context, avoiding input fields
+        // Copy IO configuration up to runtime state to keep contexts in sync without duplicating input data
+        const size_t io_config_bytes = offsetof(ImGuiIO, WantCaptureMouse);
         memcpy(
             (void*)&GImNodes->NodeEditorImgCtx->IO,
             (void*)&GImNodes->OriginalImgCtx->IO,
-            offsetof(ImGuiIO, SetPlatformImeDataFn) +
-                sizeof(GImNodes->OriginalImgCtx->IO.SetPlatformImeDataFn));
+            io_config_bytes);
 
         GImNodes->NodeEditorImgCtx->IO.BackendPlatformUserData = nullptr;
         GImNodes->NodeEditorImgCtx->IO.BackendRendererUserData = nullptr;
